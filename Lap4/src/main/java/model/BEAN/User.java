@@ -38,5 +38,9 @@ public class User {
 	public void setIdInfor(Integer idInfor) {
 		this.idInfor = idInfor;
 	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", username=" + username + ", password=" + password + ", idInfor=" + idInfor + "]";
+	}
 	
 }

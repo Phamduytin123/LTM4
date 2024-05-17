@@ -54,5 +54,10 @@ public class Staff {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	@Override
+	public String toString() {
+		return "Staff [id=" + id + ", idDepartment=" + idDepartment + ", name=" + name + ", address=" + address
+				+ ", gender=" + gender + ", phone=" + phone + "]";
+	}
 	
 }

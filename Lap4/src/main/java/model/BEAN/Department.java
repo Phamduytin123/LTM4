@@ -3,15 +3,13 @@ package model.BEAN;
 public class Department {
 	private int id;
 	private String name;
-	private String decription;
-	private String equipment;
+	private String description;
 	public Department() {
 		
 	}
-	public Department(String name, String decription, String equipment) {
+	public Department(String name, String decription) {
 		this.name = name;
-		this.decription = decription;
-		this.equipment = equipment;
+		this.description = decription;
 	}
 	public int getId() {
 		return id;
@@ -25,16 +23,15 @@ public class Department {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDecription() {
-		return decription;
+	public String getDescription() {
+		return description;
 	}
-	public void setDecription(String decription) {
-		this.decription = decription;
+	public void setDescription(String decription) {
+		this.description = decription;
 	}
-	public String getEquipment() {
-		return equipment;
+	@Override
+	public String toString() {
+		return "Department [id=" + id + ", name=" + name + ", description=" + description + "]";
 	}
-	public void setEquipment(String equipment) {
-		this.equipment = equipment;
-	}
+
 }

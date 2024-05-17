@@ -10,10 +10,11 @@ public class JDBCUtils {
 		Connection connection = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ltm", "root", "duytin123");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3309/ltm", "root", "duytin123");
 		} catch (Exception e) {
 			System.out.println(e);
 		}
+		System.out.println(connection.toString());
 		return connection;
 	}
 	public static void closeConnection(Connection c)
