@@ -7,8 +7,9 @@ import model.BEAN.User;
 public class Check {
 	public static void main(String[] args) {
 		DepartmentDAO staffDao = new DepartmentDAO();
-		for (Department staff : staffDao.getAll()) {
-			System.out.println(staff.toString());
-		}
+//		for (Staff staff : staffDao.findByIdDepartment(1)) {
+//			System.out.println(staff.toString());
+//		}
+		System.out.println(staffDao.findById(1));
 	}
 }
