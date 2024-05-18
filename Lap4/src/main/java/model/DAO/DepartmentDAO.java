@@ -85,7 +85,7 @@ public class DepartmentDAO {
 		}
 	}
 
-	public void deleteUser(int idDepartment) {
+	public void deleteDepartment(int idDepartment) {
 		try {
 			String sql = "DELETE FROM department WHERE id = ?";
 			PreparedStatement statement = conn.prepareStatement(sql);

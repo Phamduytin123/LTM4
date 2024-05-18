@@ -79,7 +79,10 @@ public class StaffDao {
 			statement.setString(3, staff.getAddress());
 			statement.setString(4, staff.getGender());
 			statement.setString(5, staff.getPhone());
-
+			int rowsInserted = statement.executeUpdate();
+			if (rowsInserted > 0) {
+				System.out.println("A new staff was inserted successfully!");
+			}
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println(e.getMessage());

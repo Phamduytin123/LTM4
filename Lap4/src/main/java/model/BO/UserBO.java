@@ -26,4 +26,10 @@ public class UserBO {
 	public User findById(int idUser) {
 		return userDAO.findById(idUser);
 	}
+	public User findUser(String username, String password) {
+		return userDAO.findUser(username, password);
+	}
+	public User findByIdInfor(int idInfor) {
+		return userDAO.findByIdInfor(idInfor);
+	}
 }

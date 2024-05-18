@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.management.relation.Relation;
 import javax.naming.LimitExceededException;
 
 import model.BEAN.User;
@@ -139,5 +140,49 @@ public class UserDAO {
 		}
 		return null;
 	}
+	public User findUser(String username, String password) {
+		try {
+			String sql = "SELECT * FROM user WHERE username = ? AND password = ?";
+			PreparedStatement statement = conn.prepareStatement(sql);
+			statement.setString(1, username);
+			statement.setString(2, password);
+			ResultSet resultSet = statement.executeQuery();
 
+			if (resultSet.next()) {
+				// Người dùng đã được tìm thấy
+				User user = new User(resultSet.getString("username"),resultSet.getString("password"),resultSet.getInt("idInfor"));
+				user.setId(resultSet.getInt("id"));
+				return user;
+			} else {
+				// Người dùng không tồn tại
+				return null;
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	public User findByIdInfor(int idInfor) {
+		try {
+			String sql = "SELECT * FROM user WHERE idInfor = ?";
+			PreparedStatement statement = conn.prepareStatement(sql);
+			statement.setInt(1, idInfor);
+			ResultSet resultSet = statement.executeQuery();
+
+			if (resultSet.next()) {
+				// Người dùng đã được tìm thấy
+				User user = new User(resultSet.getString("username"),resultSet.getString("password"),resultSet.getInt("idInfor"));
+				user.setId(resultSet.getInt("id"));
+				return user;
+			} else {
+				// Người dùng không tồn tại
+				return null;
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }

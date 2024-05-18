@@ -21,7 +21,7 @@ public class DepartmentController {
 		departmentBO.addDepartment(department);
 	}
 	public void deleteUser(int idDepartment) {
-		departmentBO.deleteUser(idDepartment);
+		departmentBO.deleteDepartment(idDepartment);
 	}
 	public Department findById(int idDepartment) {
 		return departmentBO.findById(idDepartment);

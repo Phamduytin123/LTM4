@@ -19,8 +19,8 @@ public class DepartmentBO {
 	public void addDepartment(Department department) {
 		departmentDAO.addDepartment(department);
 	}
-	public void deleteUser(int idDepartment) {
-		departmentDAO.deleteUser(idDepartment);
+	public void deleteDepartment(int idDepartment) {
+		departmentDAO.deleteDepartment(idDepartment);
 	}
 	public Department findById(int idDepartment) {
 		return departmentDAO.findById(idDepartment);
