@@ -7,11 +7,18 @@
 	<meta charset="ISO-8859-1">
 	<title>User Information</title>
     <style>
+    	body {
+            font-family: Arial, sans-serif;
+            background-color: #feddd4; /* Light sea blue background */
+            margin: 0;
+            padding: 20px;
+        }
         table {
             width: 50%;
             margin: auto;
             border-collapse: collapse;
             border: 1px solid black;
+            background-color: #fff;
         }
         th, td {
             padding: 10px;

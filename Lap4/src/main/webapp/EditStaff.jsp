@@ -10,7 +10,7 @@
 <meta charset="ISO-8859-1">
 <title>Edit Staff</title>
 <style type="text/css">
-form {
+		form {
             width: 50%;
             margin: auto;
             padding: 20px;

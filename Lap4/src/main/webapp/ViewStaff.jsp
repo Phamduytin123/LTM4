@@ -9,16 +9,26 @@
     <meta charset="UTF-8">
     <title>User List</title>
     <style>
+    	body {
+            font-family: Arial, sans-serif;
+            background-color: #ffeca8; /* Light sea blue background */
+            margin: 0;
+            padding: 20px;
+        }
         table {
             width: 50%;
+            margin: auto;
             border-collapse: collapse;
-        }
-        table, th, td {
             border: 1px solid black;
+            background-color: #fff;
         }
         th, td {
             padding: 10px;
             text-align: left;
+            border: 1px solid black;
+        }
+        th {
+            background-color: #f2f2f2;
         }
         .cot{
         	width: 200px;
@@ -30,6 +40,7 @@
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            background-color: #fff;
         }
         label {
             display: block;
@@ -56,6 +67,11 @@
         input[type="reset"] {
             background-color: #d9534f;
         }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center; /* Center the heading */
+        }
     </style>
     <script type="text/javascript">
         function confirmDelete(staffId) {
@@ -71,7 +87,7 @@
        <a href="addStaff">Staff manage</a> |
        <a href="addUser">User manage</a> |
     </td>
-    <h2>Add User</h2>
+    <h2>Add Staff</h2>
 	<form action="addStaff" method="post">
 
         <label for="idDepartment">Department:</label>
@@ -106,7 +122,7 @@
         <input type="reset" value="Reset">
     </form>
     
-    <h2>User List</h2>
+    <h2>Staff List</h2>
     <table>
         <thead>
             <tr>
